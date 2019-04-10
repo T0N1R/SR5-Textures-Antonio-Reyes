@@ -65,8 +65,8 @@ class Texture(object):
     def get_color(self, tx, ty, intensity):
         x = int(tx * self.width) -1
         y = int(ty * self.height) -1
-        print(x)
-        print(y)
+        #print(x)
+        #print(y)
         return bytes (
             map(
             lambda b : round(b * intensity) 
@@ -283,8 +283,8 @@ class Bitmap(object):
                     tx = float(vt0x) * w + float(vt1x) * v + float(vt2x) * u
                     ty = float(vt0y) * w + float(vt1y) * v + float(vt2y) * u
                     colores = t.get_color(tx, ty, intensidad)
-                    print(colores)
-                    print("==============")
+                    #print(colores)
+                    #print("==============")
                     r.glColor(*colores)
 
                 except:
@@ -388,10 +388,10 @@ def dataObj(archivo):
                 serieVT.append(q[1])
                 serieCaras3.append(q[2])
 
-            print (serieCaras1)
-            print (serieVT)
-            print (serieCaras3)    
-            print("************************")
+            #print (serieCaras1)
+            #print (serieVT)
+            #print (serieCaras3)    
+            #print("************************")
             
             
             #print(serieCaras)
@@ -457,9 +457,9 @@ def dataObj(archivo):
 
             vt2x = verticeT[int(serieVT[2])][0]
             vt2y = verticeT[int(serieVT[2])][1]
-            print(vt0x, vt0y)
-            print(vt1x, vt1y)
-            print(vt2x, vt2y)
+            #print(vt0x, vt0y)
+            #print(vt1x, vt1y)
+            #print(vt2x, vt2y)
 
             r.triangle(V3(x0,y0,z0), V3(x1,y1,z1), V3(x2,y2,z2), vt0x, vt0y, vt1x, vt1y, vt2x, vt2y, intensidad)
         
